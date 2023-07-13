@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -8,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.get('/may', (req, res) => {
-    res.send('hi may full stack course!');
+    res.send(process.env.NISIM);
 });
 
 app.listen(port, () => {
