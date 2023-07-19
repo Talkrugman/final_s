@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.get('/singers', async (req, res) => {
-    res.send('kbkbk')
+    res.send(process.env.NISIM)
     // const singers = await Singer.find({});
     // res.json(singers);
 });
