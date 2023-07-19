@@ -4,17 +4,17 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 const port = 5001;
-// const mongoose = require('mongoose');
-// const { connectToMongo } = require('./db.js');
-// const Singer = require('Singer.js');
+const { connectToMyMongoDB } = require('./db.js');
+const Singers = require('./Singers.js');
+
+connectToMyMongoDB();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.get('/singers', async (req, res) => {
-    res.send(process.env.NISIM)
-    // const singers = await Singer.find({});
-    // res.json(singers);
+    const singers = await Singers.find({});
+    res.json(singers);
 });
 
 app.listen(port, () => {
