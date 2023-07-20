@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Product = require('./models/Product');
 
 const mongoUser = process.env.MONGO_ATLAS_USER;
 const mongoPass = process.env.MONGO_ATLAS_PASS;
@@ -16,7 +17,7 @@ function connectToMyMongoDB() {
 }
 
 async function getAllProducts() {
-	return [];
+	return await Product.find({});
 }
 
 async function getAllOrders() {
