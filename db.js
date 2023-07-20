@@ -15,4 +15,20 @@ function connectToMyMongoDB() {
 	mongoose.connect(mongoUrl);
 }
 
-module.exports = { connectToMyMongoDB };
+async function getAllProducts() {
+	return [];
+}
+
+async function getAllOrders() {
+	return [];
+}
+async function getAllUsers() {
+	return [];
+}
+
+module.exports = { 
+	connectToMyMongoDB,
+	getAllOrders,
+	getAllProducts,
+	getAllUsers
+ };

@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "name": "milk",
+            "price": 10
+        }
+    ],
+    "categories": [
+        {
+            "name": "milkstuf"
+
+        }
+    ],
+    "orders": [
+        {}
+    ],
+    "users": [
+        {
+            "name": "milk",
+            "price": 10,
+            "email": "milk@gmail.com",
+            "phone": 52546020
+        }
+    ]
+}
